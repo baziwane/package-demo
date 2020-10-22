@@ -1,0 +1,21 @@
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: git-repo
+spec:
+  type: git
+  params:
+    - name: revision
+      value: master
+    - name: url
+      value: https://gitlab.com/nmeisenzahl/tekton-demo
+---
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: image-registry
+spec:
+  type: image
+  params:
+    - name: url
+      value: registry.gitlab.com/nmeisenzahl/tekton-demo/demo:latest

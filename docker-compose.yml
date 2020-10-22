@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  poemfinder:
+    image: packagedemoapp
+    container_name: packagedemoapp
+    build:
+      context: .
+      dockerfile: ./src/packagedemoapp/Dockerfile
