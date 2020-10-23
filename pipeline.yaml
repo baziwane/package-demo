@@ -10,10 +10,10 @@ spec:
     params:
       - name: pathToDockerFile
         description: Path to Dockerfile
-        default: /workspace/git-repo/Dockerfile
+        default: /workspace/git-repo/src/packagedemoapp/Dockerfile
       - name: pathToContext
         description: The build context used by Kaniko
-        default: /workspace/git-repo
+        default: /workspace/git-repo/src/packagedemoapp/
   outputs:
     resources:
       - name: image-registry
@@ -47,9 +47,9 @@ spec:
         name: build-docker-image
       params:
         - name: pathToDockerFile
-          value: /workspace/git-repo/Dockerfile
+          value: /workspace/git-repo/src/packagedemoapp/Dockerfile
         - name: pathToContext
-          value: /workspace/git-repo
+          value: /workspace/git-repo/src/packagedemoapp/
       resources:
         inputs:
           - name: git-repo

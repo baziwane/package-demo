@@ -6,9 +6,9 @@ spec:
   type: git
   params:
     - name: revision
-      value: master
+      value: main
     - name: url
-      value: https://gitlab.com/nmeisenzahl/tekton-demo
+      value: https://github.com/baziwane/package-demo
 ---
 apiVersion: tekton.dev/v1alpha1
 kind: PipelineResource
@@ -18,4 +18,4 @@ spec:
   type: image
   params:
     - name: url
-      value: registry.gitlab.com/nmeisenzahl/tekton-demo/demo:latest
+      value: docker.pkg.github.com/baziwane/package-demo/packagedemoapp:latest
